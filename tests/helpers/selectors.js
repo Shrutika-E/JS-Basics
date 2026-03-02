@@ -28,6 +28,12 @@ module.exports = {
   accountCreatedText: 'text=ACCOUNT CREATED',
   continueButton: 'a[data-qa="continue-button"]',
   loggedInText: 'text=Logged in as',
+  logoutLink: 'text=Logout',
+  // login form selectors
+  loginPageHeader: 'text=Login to your account',
+  loginEmail: 'input[data-qa="login-email"]',
+  loginPassword: 'input[data-qa="login-password"]',
+  loginButton: 'button[data-qa="login-button"]',
   deleteHref: 'a[href*="delete"]',
   deleteTextXPath: '//a[contains(translate(text(), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "delete")]',
   deleteHasText: 'a:has-text("Delete")',

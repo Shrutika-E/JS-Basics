@@ -13,5 +13,20 @@
     "city": "San Francisco",
     "zipcode": "94102",
     "mobile": "1234567890"
+  },
+  "savedUser": {
+    "name": "testuser74835",
+    "email": "testuser74835@test.com",
+    "password": "TestPass123!",
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Tech Corp",
+    "address": "123 Main Street",
+    "address2": "Apt 4B",
+    "country": "United States",
+    "state": "California",
+    "city": "San Francisco",
+    "zipcode": "94102",
+    "mobile": "1234567890"
   }
 }
