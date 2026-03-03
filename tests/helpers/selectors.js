@@ -7,6 +7,8 @@ module.exports = {
   nameFieldAlt: 'input[name="name"]',
   signupEmail: 'input[data-qa="signup-email"]',
   signupButton: 'button[data-qa="signup-button"]',
+  // flexible, case-insensitive match for duplicate-email messages (contains 'email' and 'exist')
+  emailExistsError: 'xpath=//*[contains(translate(normalize-space(.), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "email") and contains(translate(normalize-space(.), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "exist")]',
   accountInfoText: 'text=ENTER ACCOUNT INFORMATION',
   passwordInput: 'input[data-qa="password"]',
   daysSelect: 'select[data-qa="days"]',
@@ -34,6 +36,7 @@ module.exports = {
   loginEmail: 'input[data-qa="login-email"]',
   loginPassword: 'input[data-qa="login-password"]',
   loginButton: 'button[data-qa="login-button"]',
+  loginErrorMessage: 'text=Your email or password is incorrect!',
   deleteHref: 'a[href*="delete"]',
   deleteTextXPath: '//a[contains(translate(text(), "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz"), "delete")]',
   deleteHasText: 'a:has-text("Delete")',

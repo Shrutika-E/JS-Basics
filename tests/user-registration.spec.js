@@ -69,4 +69,6 @@ test.describe('User Registration and Account Deletion Flow', () => {
       console.log('Home page verification skipped');
     }
   });
+
+  // duplicate-email test moved to its own spec file: tests/register-existing-email.spec.js
 });
