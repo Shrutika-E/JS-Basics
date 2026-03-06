@@ -1,8 +1,18 @@
 const { test, expect } = require('@playwright/test');
 const userData = require('./helpers/userData');
 const common = require('./helpers/common');
+const { takeFailureScreenshot } = common;
 const nav = require('./helpers/navigation');
 const selectors = require('./helpers/selectors');
+const registerHooks = require('./helpers/hooks');
+registerHooks(test);
+
+test.afterEach(async ({ page }, testInfo) => {
+  if (testInfo.status !== testInfo.expectedStatus) {
+    const name = testInfo.title.replace(/\s+/g, '-').toLowerCase();
+    await takeFailureScreenshot(page, name);
+  }
+});
 
 
 test.describe('Login with valid credentials', () => {

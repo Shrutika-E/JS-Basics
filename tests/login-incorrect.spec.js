@@ -1,7 +1,17 @@
 const { test, expect } = require('@playwright/test');
 const common = require('./helpers/common');
+const { takeFailureScreenshot } = common;
 const nav = require('./helpers/navigation');
 const selectors = require('./helpers/selectors');
+const registerHooks = require('./helpers/hooks');
+registerHooks(test);
+
+test.afterEach(async ({ page }, testInfo) => {
+  if (testInfo.status !== testInfo.expectedStatus) {
+    const name = testInfo.title.replace(/\s+/g, '-').toLowerCase();
+    await takeFailureScreenshot(page, name);
+  }
+});
 
 test.describe('Login with incorrect credentials', () => {
   test('should display error message when login with wrong email and password', async ({ page }) => {
