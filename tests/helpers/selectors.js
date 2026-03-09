@@ -1,6 +1,6 @@
 module.exports = {
   homeHeading: 'h1:first-of-type',
-  signupLoginLinkText: 'text=Signup/Login',
+  signupLoginLinkText: 'text=Signup / Login',
   signupPagePath: '/login',
   newUserSignupText: 'text=New User Signup!',
   namePlaceholder: 'input[placeholder="Name"]',
@@ -121,4 +121,10 @@ module.exports = {
   expiryYearInput: 'input[name="expiry_year"]',
   payAndConfirmButton: 'button:has-text("Pay and Confirm Order")',
   orderPlacedMessage: 'p:has-text("Your order has been placed successfully!")',
-  deleteAccountButton: 'a:has-text("Delete Account")'};
+  deleteAccountButton: 'a:has-text("Delete Account")',
+  // new selectors for additional test cases
+  deliveryAddress: '.address_delivery',
+  billingAddress: '.address_billing',
+  downloadInvoiceButton: 'a:has-text("Download Invoice")',
+  scrollUpArrow: 'a#scrollUp',
+  fullFledgedText: 'h2:has-text("Full-Fledged practice website for Automation Engineers")'};
