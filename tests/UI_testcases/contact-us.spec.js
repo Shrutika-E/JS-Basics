@@ -1,12 +1,12 @@
 const { test, expect } = require('@playwright/test');
-const userData = require('./helpers/userData');
-const common = require('./helpers/common');
+const userData = require('../helpers/userData');
+const common = require('../helpers/common');
 const { takeFailureScreenshot } = common;
-const nav = require('./helpers/navigation');
-const selectors = require('./helpers/selectors');
+const nav = require('../helpers/navigation');
+const selectors = require('../helpers/selectors');
 const fs = require('fs');
 const path = require('path');
-const registerHooks = require('./helpers/hooks');
+const registerHooks = require('../helpers/hooks');
 registerHooks(test);
 
 

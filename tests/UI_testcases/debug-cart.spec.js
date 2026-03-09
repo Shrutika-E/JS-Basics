@@ -1,7 +1,7 @@
 const { test } = require('@playwright/test');
-const common = require('./helpers/common');
+const common = require('../helpers/common');
 const { takeFailureScreenshot } = common;
-const registerHooks = require('./helpers/hooks');
+const registerHooks = require('../helpers/hooks');
 registerHooks(test);
 
 test.afterEach(async ({ page }, testInfo) => {

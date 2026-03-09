@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
-const userData = require('./helpers/userData');
-const common = require('./helpers/common');
+const userData = require('../helpers/userData');
+const common = require('../helpers/common');
 const { takeFailureScreenshot } = common;
-const nav = require('./helpers/navigation');
-const selectors = require('./helpers/selectors');
-const registerHooks = require('./helpers/hooks');
+const nav = require('../helpers/navigation');
+const selectors = require('../helpers/selectors');
+const registerHooks = require('../helpers/hooks');
 registerHooks(test);
 
 test.afterEach(async ({ page }, testInfo) => {

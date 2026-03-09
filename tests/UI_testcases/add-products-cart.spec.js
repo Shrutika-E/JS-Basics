@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
-const common = require('./helpers/common');
+const common = require('../helpers/common');
 const { takeFailureScreenshot } = common;
-const selectors = require('./helpers/selectors');
-const registerHooks = require('./helpers/hooks');
+const selectors = require('../helpers/selectors');
+const registerHooks = require('../helpers/hooks');
 registerHooks(test);
 
 // Add Products in Cart
