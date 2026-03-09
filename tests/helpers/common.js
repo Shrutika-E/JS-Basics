@@ -133,6 +133,12 @@ async function registerUser(page, user) {
   await page.locator(selectors.signupEmail).fill(user.email);
   await page.locator(selectors.signupButton).click();
 
+  // wait for page to load
+  await page.waitForLoadState('domcontentloaded');
+
+  // dismiss ads again
+  await dismissAds(page);
+
   // wait for account information section
   await page.waitForSelector(selectors.passwordInput, { state: 'visible', timeout: 10000 }).catch(() => {});
 

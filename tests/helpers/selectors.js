@@ -93,5 +93,5 @@ module.exports = {
   expiryMonthInput: 'input[name="expiry_month"]',
   expiryYearInput: 'input[name="expiry_year"]',
   payAndConfirmButton: 'button:has-text("Pay and Confirm Order")',
-  orderPlacedMessage: 'p:has-text("Congratulations! Your order has been confirmed!")',
+  orderPlacedMessage: 'p:has-text("Your order has been placed successfully!")',
   deleteAccountButton: 'a:has-text("Delete Account")'};
