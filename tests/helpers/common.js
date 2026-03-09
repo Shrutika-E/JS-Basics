@@ -68,9 +68,13 @@ async function dismissAds(page) {
     '.overlay-close',
     '.advertisement-close',
     
-    // XPath alternatives if needed
-    '//button[contains(text(), "Close")]',
-    '//a[contains(text(), "Close")]'
+    // GDPR/Consent popups
+    '.fc-consent-root .fc-button',
+    '.fc-consent-root button',
+    '[data-testid="cookie-accept"]',
+    '[data-testid="cookie-reject"]',
+    '.cookie-consent button',
+    '.gdpr button'
   ];
 
   let dismissedCount = 0;

@@ -33,6 +33,11 @@ function generateUser() {
   return user;
 }
 
+// a simple helper used by tests for a default search term
+function getSearchTerm() {
+  return 'Dress';
+}
+
 // write a user record back into users.json under "savedUser" key
 function saveUser(user) {
   const file = path.join(__dirname, '..', '..', 'data', 'users.json');
@@ -50,4 +55,4 @@ function getSavedUser() {
   return parsed.savedUser || null;
 }
 
-module.exports = { getBase, generateUser, saveUser, getSavedUser };
+module.exports = { getBase, generateUser, saveUser, getSavedUser, getSearchTerm };

@@ -4,6 +4,16 @@ const { takeFailureScreenshot } = common;
 module.exports = (test) => {
   // Runs before each test to prepare the environment
   test.beforeEach(async ({ page }) => {
+    // Block advertisement and tracking requests to improve test stability
+    await page.route('**/*', (route) => {
+      const url = route.request().url();
+      if (url.includes('google') || url.includes('ads') || url.includes('doubleclick') || url.includes('fundingchoices') || url.includes('googlesyndication')) {
+        route.abort();
+      } else {
+        route.continue();
+      }
+    });
+
     try {
       // Navigate to home page and verify it loads successfully
       await common.verifyHome(page);

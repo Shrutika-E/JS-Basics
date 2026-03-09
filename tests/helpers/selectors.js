@@ -58,6 +58,18 @@ module.exports = {
   testCasesLink: 'text=Test Cases',
   productsLink: 'a[href="/products"]',
   productsHeading: 'h2.title.text-center',
+  // category selectors
+  categoriesSection: '.left-sidebar .category-products',
+  categoryWomen: 'a[href="#Women"]',
+  // explicit href values avoid matching product names elsewhere
+  categoryDress: 'a[href="/category_products/1"]',
+  categoryMen: 'a[href="#Men"]',
+  categoryMenSub: 'a[href="/category_products/3"]',
+  categoryPageHeading: 'h2.title.text-center',
+  // brand selectors
+  brandsSection: '.brands_products',
+  brandLink: '.brands_products .brands-name li a',
+  // search selectors
   productSearchInput: '#search_product',
   productSearchButton: '#submit_search',
   searchedProductsHeading: 'div.features_items h2.title',
@@ -76,7 +88,8 @@ module.exports = {
   subscriptionButton: 'footer form.searchform button[type="submit"]',
   subscriptionSuccessMessage: 'div.alert-success.alert',
   cartLink: 'a[href="/view_cart"]',
-  cartTableRows: 'table.cart_info tbody tr',
+  // cart rows selector: table is inside a div.cart_info, not the table itself
+  cartTableRows: 'div.cart_info table tbody tr',
   cartQuantityInput: 'td.cart_quantity button',
   cartPriceCell: 'td.cart_price p',
   cartTotalCell: 'td.cart_total p',
@@ -87,6 +100,20 @@ module.exports = {
   reviewOrderHeading: 'h2:has-text("Review Your Order")',
   commentTextArea: 'textarea[name="message"]',
   placeOrderButton: 'a:has-text("Place Order")',
+  // review submission selectors
+  reviewTab: 'a[href="#reviews"]',
+  reviewNameInput: '#name',
+  reviewEmailInput: '#email',
+  reviewTextInput: '#review',
+  reviewSubmitButton: '#button-review',
+  reviewSuccessMessage: '#review-section span',
+  // recommended items
+  recommendedItemsSection: '.recommended_items',
+  recommendedAddToCart: '.recommended_items a.add-to-cart',
+  // only attempt to add from the currently active carousel slide
+  activeRecommendedAddToCart: '.recommended_items .item.active a.add-to-cart',
+  recommendedViewCartButton: 'a:has-text("View Cart")',
+  nameOnCardInput: 'input[name="name_on_card"]',
   nameOnCardInput: 'input[name="name_on_card"]',
   cardNumberInput: 'input[name="card_number"]',
   cvcInput: 'input[name="cvc"]',
